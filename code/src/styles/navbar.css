@@ -1,0 +1,47 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--very-light-gray-light-mode-background);
+    box-shadow: 0px 0 3px 0px #000000;
+    width: 100%;
+    padding: 1.5vw 2vw;
+}
+.darkMode{
+    display: flex;
+    align-items: center; 
+  gap: 7px;
+  font-size: 1.2em;
+  font-weight: var(--weight-600);
+  
+}
+
+header h1{
+    font-weight: var(--weight-800);
+    font-size: 1.7em;
+    cursor: pointer;
+}
+.day{
+    color: var(--very-dark-blue-light-mode-text);
+
+}
+.night{
+    color:var(--white-dark-mode-text-light-mode-elements) ;
+}
+
+:is( .darkMode i , .darkMode p) {
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 430px) {
+    header h1{
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 320px) {
+     :is(header h1 , .darkMode){
+        font-size: 1em;
+    }
+   
+}
